@@ -3,7 +3,7 @@
     <nav v-bind:class="{ fixed }">
       <v-toolbar class="banner" v-bind:class="{ transparent }" flat>
         <v-toolbar-title>
-          <a href="/">
+          <a href="/" @click="$sRouter.navigate($event)">
             <img :src="logo" class="logo-name">
           </a>
         </v-toolbar-title>
