@@ -17,55 +17,65 @@
       <v-divider></v-divider>
 
       <v-list v-bind:class="{ mobile: !$vuetify.breakpoint.smAndUp }">
-        <v-list-item link v-on:click="$router.push('/dashboard')">
-          <v-list-item-icon>
-            <v-icon>mdi-view-dashboard</v-icon>
-          </v-list-item-icon>
+        <a href="/dashboard" @click="$sRouter.navigate($event)">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-view-dashboard</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
-            <v-list-item-title>{{ $_('DASHBOARD') }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
+              <v-list-item-title>{{ $_('DASHBOARD') }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </a>
         
-        <v-list-item link v-on:click="$router.push('/my-contracts')">
-          <v-list-item-icon>
-            <v-icon>mdi-file-document-box-multiple</v-icon>
-          </v-list-item-icon>
+        <a href="/my-contracts" @click="$sRouter.navigate($event)">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-file-document-box-multiple</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
-            <v-list-item-title>{{ $_('MY_CONTRACTS') }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
+              <v-list-item-title>{{ $_('MY_CONTRACTS') }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </a>
         
-        <v-list-item link v-on:click="$router.push('/my-products')">
-          <v-list-item-icon>
-            <v-icon>mdi-monitor-cellphone</v-icon>
-          </v-list-item-icon>
+        <a href="/my-products" @click="$sRouter.navigate($event)">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-monitor-cellphone</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
-            <v-list-item-title>{{ $_('MY_PRODUCTS') }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
+              <v-list-item-title>{{ $_('MY_PRODUCTS') }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </a>
         
-        <v-list-item link v-if="$sAuth.isAdmin()" v-on:click="$router.push('/users')">
-          <v-list-item-icon>
-            <v-icon>mdi-account-group</v-icon>
-          </v-list-item-icon>
+        <a v-if="$sAuth.isAdmin()" href="/users" @click="$sRouter.navigate($event)">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-account-group</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
-            <v-list-item-title>{{ $_('USERS') }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
+              <v-list-item-title>{{ $_('USERS') }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </a>
 
-        <v-list-item link v-on:click="$router.push('/my-account')">
-          <v-list-item-icon>
-            <v-icon>mdi-account</v-icon>
-          </v-list-item-icon>
+        <a href="/my-account" @click="$sRouter.navigate($event)">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-account</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
-            <v-list-item-title>{{ $_('MY_ACCOUNT') }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+            <v-list-item-content v-if="$vuetify.breakpoint.smAndUp">
+              <v-list-item-title>{{ $_('MY_ACCOUNT') }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </a>
       </v-list>
 
       <template v-slot:append>
@@ -111,5 +121,9 @@
   /deep/ div.mobile div.v-list-item__icon {
     margin-right: auto;
     margin-left: auto;
+  }
+  /deep/ a {
+    color: inherit;
+    text-decoration: none;
   }
 </style>

@@ -5,7 +5,7 @@
         <v-list-item-group active-class="deep-purple--text text--accent-4">
           <v-list-item>
             <v-list-item-title>
-              <a href="/">
+              <a href="/" @click="$sRouter.navigate($event)">
                 <img :src="logo" class="logo-name">
               </a>
             </v-list-item-title>
