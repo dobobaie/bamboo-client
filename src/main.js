@@ -31,7 +31,7 @@ Vue.use(VueCookies);
 
 // Other init
 Vue.use(LocalModels);
-Vue.use(LocalServices);
+Vue.use(LocalServices, { Router });
 
 // Vue rendering
 new Vue({

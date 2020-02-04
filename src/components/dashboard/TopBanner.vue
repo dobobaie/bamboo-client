@@ -1,9 +1,9 @@
 <template>
-  <v-content class="topBanner">
+  <v-content class="dashboardTopBanner">
     <nav>
       <v-toolbar class="banner transparent" flat>
         <v-toolbar-title>
-          <a href="/dashboard">
+          <a href="/dashboard" @click="$sRouter.navigate($event)">
             <img :src="logo" class="logo-name">
           </a>
         </v-toolbar-title>
