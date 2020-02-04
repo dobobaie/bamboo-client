@@ -2,7 +2,11 @@
 
 Bamboo client is the official UI of the Bamboo project.   
 
-## Environment variables
+[Live bamboo client](http://164.132.106.118:8080/)  
+
+## Requirements
+
+### Environment variables
 
 The JSON format bellow must be filled and then saved at the root of the repository as `.env` file.  
 
